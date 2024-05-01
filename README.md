@@ -40,3 +40,19 @@ docker volume rm [볼륨 이름]
 이렇게 하면 기존 데이터를 모두 삭제하고 완전히 새로운 환경에서 다시 시작할 수 있습니다.
 
 ---
+
+- 도커에서 로그 확인하기  
+  - sudo docker logs [컨테이너명]
+
+    ```bash  
+    sudo docker logs ps01
+    ```
+
+- 현재 실행중인 도커 컨테이너 확인  
+
+  ```bash
+  docker ps -a
+  ```
+
+
+

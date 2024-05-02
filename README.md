@@ -56,3 +56,19 @@ docker volume rm [볼륨 이름]
 
 
 
+---  
+
+# amazon linux 2023  명령어  
+
+### 타임존 변경  
+
+- 현재시간확인  
+  ```bash 
+  date
+  ```
+
+- 타임존 변경
+  ```bash
+  sudo rm /etc/localtime
+  sudo ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+  ```

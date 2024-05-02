@@ -74,3 +74,56 @@ docker volume rm [볼륨 이름]
   ```
 
 ![alt text](images/markdown-image.png)
+
+
+- docker-compose 실행명령어   
+  ```bash
+  sudo docker-compose -f docker-compose.yml up --build -d
+  ```
+
+<br>
+
+---  
+
+<br>
+
+Docker 컨테이너 내부의 파일을 보는 방법에는 여러 가지가 있습니다. 가장 일반적인 방법은 `docker exec` 명령을 사용하여 컨테이너에 접속하거나 컨테이너 내부에서 명령을 실행하는 것입니다.
+
+### 1. 컨테이너에 Bash 쉘로 접속하기
+컨테이너에 bash 쉘을 사용하여 직접 접속할 수 있습니다. 이 방법은 컨테이너 내부에서 파일을 탐색하고, 수정하며, 컨테이너의 상태를 확인할 수 있게 해줍니다. 컨테이너 내부에 bash가 설치되어 있어야 합니다.
+
+```bash
+sudo docker exec -it [컨테이너 이름 또는 ID] /bin/bash
+```
+
+예를 들어, 컨테이너 이름이 `dg01`이라면 다음과 같이 입력합니다:
+
+```bash
+sudo docker exec -it dg01 /bin/bash
+```
+
+### 2. 컨테이너 내부에서 명령 실행하기
+특정 파일의 내용을 직접 보거나 디렉토리의 내용을 리스트하고 싶다면, `docker exec` 명령을 사용하여 컨테이너 내에서 명령을 실행할 수 있습니다. 예를 들어, 컨테이너 내부의 `/app` 디렉토리의 내용을 보고 싶다면 다음과 같이 입력합니다:
+
+```bash
+sudo docker exec [컨테이너 이름 또는 ID] ls /app
+```
+
+컨테이너 내의 특정 파일을 확인하고 싶다면 `cat` 명령을 사용할 수 있습니다:
+
+```bash
+sudo docker exec [컨테이너 이름 또는 ID] cat /app/example.txt
+```
+
+### 3. 컨테이너에서 파일 복사하기
+컨테이너 내부의 파일을 로컬 시스템으로 복사하고 싶다면 `docker cp` 명령을 사용할 수 있습니다. 예를 들어, 컨테이너 내의 `/app/config.py` 파일을 로컬 시스템의 현재 디렉토리로 복사하고 싶다면 다음과 같이 입력합니다:
+
+```bash
+sudo docker cp [컨테이너 이름 또는 ID]:/app/config.py .
+```
+
+이 명령들을 사용하여 Docker 컨테이너 내부의 파일 시스템을 쉽게 탐색하고 필요한 정보를 얻을 수 있습니다.
+
+<br> 
+
+---

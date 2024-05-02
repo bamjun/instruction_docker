@@ -72,3 +72,5 @@ docker volume rm [볼륨 이름]
   sudo rm /etc/localtime
   sudo ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
   ```
+
+![alt text](images/markdown-image.png)

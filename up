@@ -11,7 +11,7 @@ read index
 status=$(git status)
 
 # "working tree clean"이 포함되어 있으면 변경 사항이 없는 것으로 판단
-if [[ $status == *"Your branch is up to date"* ]]; then
+if [[ $status == *"working tree clean"* ]]; then
     echo "변경 사항이 없어 커밋할 내용이 없습니다."
 else
     # 변경 사항이 있으면 커밋을 수행

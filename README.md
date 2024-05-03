@@ -170,3 +170,19 @@ sudo docker-compose -f docker-compose.yml up --build -d
 <br>
 
 ---
+
+
+
+
+
+
+
+# 참고 영상
+[도커파일1](https://www.youtube.com/watch?v=8p9RvxVOQEY)
+[도커파일2](https://www.youtube.com/watch?v=BCsiVlmEQCQ)
+
+
+https://www.youtube.com/watch?v=C-bX86AgyiA
+
+
+https://www.youtube.com/watch?v=3FY-DzXYu7E

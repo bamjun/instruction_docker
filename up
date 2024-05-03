@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo "커밋 메시지를 입력하세요:"
+read index
+
+if [ -z "$index" ]; then
+    echo "커밋 메시지가 입력되지 않았습니다."
+else
+    git add .
+    git commit -m "$index"
+    git push
+fi
